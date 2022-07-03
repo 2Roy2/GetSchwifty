@@ -1,4 +1,3 @@
-
 function createRow(colomns){
     for(let i=0;i<colomns;i++){
         var button = document.createElement("button");
@@ -12,6 +11,7 @@ function createRow(colomns){
         });
     }
 }
+
 export function createBlocks(colomns,rows){
     var body = document.getElementsByTagName("body")[0];
     for(let i=0;i<rows;i++){
