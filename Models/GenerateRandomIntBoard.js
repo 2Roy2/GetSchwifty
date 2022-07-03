@@ -1,4 +1,5 @@
 import { Board } from '../Common/Board.js';
+import {Block} from '../Common/Block.js';
 
 
 function removeValueFromValues(values,value){
@@ -15,7 +16,7 @@ function generateRow(rowSize,values){
     let row = new Array();
     for(let i =0;i<rowSize;i++){
         let value =  values[Math.floor(Math.random()*values.length)];
-        row.push(value);
+        row.push(new Block(value));
         values=removeValueFromValues(values,value); 
     }
     let newValues = values;
@@ -24,7 +25,7 @@ function generateRow(rowSize,values){
 
  export function generateRandomBoard(columns,rows){
     let board = new Array();
-    values = getBoxValues(columns*rows);
+    let values = getBoxValues(columns*rows);
     for(let i =0;i<rows;i++){
         let {row,newValues}=generateRow(columns,values);
         board.push(row);
