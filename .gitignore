@@ -17,7 +17,7 @@
 .settings
 .tmproj
 nbproject
-Thumbs.db
+Thumbs.db   
 
 # NPM packages folder.
 node_modules/
