@@ -6,7 +6,8 @@ export function makeMove(board,positionX,positionY){
         return;
     }
     updateBoard(board);
-    if(checkForWin(board)){
-        
+    if(!checkForWin(board)){
+        return;
     }
+    
 }

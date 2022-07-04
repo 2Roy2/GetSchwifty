@@ -6,15 +6,7 @@ import {generateRandomBoard} from './Controllers/GenerateBoard/GenerateRandomBoa
 import { getBoxValues } from './Controllers/GenerateBoard/NumberBlocks.js';
 import{getOpposite} from './Controllers/BordValidators/OppositeBoardGetter.js'
 import {generateBoard} from './Controllers/GenerateBoard/BoardGenerator.js'
-let rows =3;
-let columns=3;
-let size =rows*columns;
+import {createBoard} from './Controllers/BoardCreators/BoardCreator.js'
 
-let board =generateBoard(rows,columns,getBoxValues(size));
-createBlocks(board);
-// console.log(getOpposite(board,[0,0]));
-
-// let updatedBoard = generateRandomBoard(3,3,getBoxValues(9));
-// await new Promise(r => setTimeout(r, 2000));
-
-// updateBoard(updatedBoard)
+let createBoardBtn = document.getElementById("board_creator");
+createBoardBtn.addEventListener("click",()=>createBoard());
