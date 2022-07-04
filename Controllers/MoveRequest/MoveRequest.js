@@ -5,6 +5,7 @@ export function makeMove(board,positionX,positionY){
     if(!tryMove(board,positionX,positionY)){
         return;
     }
+    board.gameLength++;
     updateBoard(board);
     if(!checkForWin(board)){
         return;
