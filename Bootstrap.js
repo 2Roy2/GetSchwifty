@@ -6,8 +6,8 @@ import {generateRandomBoard} from './Controllers/GenerateBoard/GenerateRandomBoa
 import { getBoxValues } from './Controllers/GenerateBoard/IntValues.js';
 import{getOpposite} from './Controllers/BordValidators/OppositeBoardGetter.js'
 
-let rows =4;
-let columns=4;
+let rows =3;
+let columns=3;
 let size =rows*columns;
 
 let board =generateRandomBoard(rows,columns,getBoxValues(size));
