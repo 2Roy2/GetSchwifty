@@ -1,5 +1,5 @@
 import { updateBoard } from "../../Views/UpadateBoard.js";
-
+import { checkForWin } from "../WinCheckers/WinChecker.js";
 export function makeMove(board,positionX,positionY){
     let blocks = board.blocks;
     if(blocks[0].length>positionX+1&&blocks[positionY][positionX+1].val==0){
@@ -23,5 +23,5 @@ export function makeMove(board,positionX,positionY){
         blocks[positionY][positionX]=temp;
     }
     updateBoard(board);
-
+    console.log(checkForWin(board));
 }
