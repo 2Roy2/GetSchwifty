@@ -1,3 +1,4 @@
+
 export function updateBoard(board){
     var buttons = document.getElementsByTagName('button');
     let blocks = board.blocks.flat();
