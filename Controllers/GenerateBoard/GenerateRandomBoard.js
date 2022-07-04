@@ -10,7 +10,7 @@ function generateRow(rowSize,values){
     let row = new Array();
     for(let i =0;i<rowSize;i++){
         let value =  values[Math.floor(Math.random()*values.length)];
-        row.push(new Block(value));
+        row.push(value);
         values=removeValueFromValues(values,value); 
     }
     let newValues = values;

@@ -3,7 +3,7 @@ import { makeMove } from "../Controllers/MoveMakers/MoveMaker.js";
 function createRow(row,board,rowIndex) {
     for (let i = 0; i < row.length; i++) {
         var button = document.createElement("button");
-        button.innerHTML = row[i].val;
+        button.innerHTML = row[i].displayVal;
 
         var body = document.getElementsByTagName("body")[0];
         body.appendChild(button);
