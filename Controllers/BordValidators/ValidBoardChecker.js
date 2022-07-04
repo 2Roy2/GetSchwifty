@@ -40,7 +40,6 @@ function oddRowBoardChecker(opposites){
 export function checkBoard(board){
     let blocks = board.blocks;
     let opposites = getAllOpposites(board);
-    console.log(opposites);
     if(blocks.length%2==0){
         return evenRowBoardChecker(opposites,board);
     }

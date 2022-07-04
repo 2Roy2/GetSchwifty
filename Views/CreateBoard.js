@@ -1,4 +1,4 @@
-import { makeMove } from "../Controllers/MoveMakers/MoveMaker.js";
+import { makeMove } from "../Controllers/MoveRequest/MoveRequest.js";
 
 function createRow(row,board,rowIndex) {
     for (let i = 0; i < row.length; i++) {
