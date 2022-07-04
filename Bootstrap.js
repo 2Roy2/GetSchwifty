@@ -5,11 +5,10 @@ import {updateBoard} from './Views/UpadateBoard.js';
 import {generateRandomBoard} from './Controllers/GenerateBoard/GenerateRandomBoard.js';
 import { getBoxValues } from './Controllers/GenerateBoard/IntValues.js';
 import{getOpposite} from './Controllers/BordValidators/OppositeBoardGetter.js'
-import {generateBoard} from './Controllers/GenerateBoard/BoardGenerator.js';
+import {generateBoard} from './Controllers/GenerateBoard/BoardGenerator.js'
 let rows =3;
 let columns=3;
 let size =rows*columns;
-
 
 let board =generateBoard(rows,columns,getBoxValues(size));
 createBlocks(board);
