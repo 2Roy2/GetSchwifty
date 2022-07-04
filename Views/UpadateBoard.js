@@ -1,4 +1,3 @@
-
 export function updateBoard(board){
     let game = document.getElementById("game");
     var buttons = game.getElementsByTagName('button');

@@ -10,5 +10,4 @@ export function makeMove(board,positionX,positionY){
     if(!checkForWin(board)){
         return;
     }
-    
 }
