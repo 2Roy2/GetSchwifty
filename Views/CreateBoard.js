@@ -14,7 +14,6 @@ function createRow(row,board,rowIndex) {
 
 export function createBlocks(board) {
     var body = document.getElementById("game");
-    console.log(body);
     for (let i = 0; i < board.blocks.length; i++) {
         createRow(board.blocks[i],board,i);
         let br = document.createElement("br");
