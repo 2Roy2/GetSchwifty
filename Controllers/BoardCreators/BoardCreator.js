@@ -6,6 +6,9 @@ import { getBoardValues } from './ValueGetter.js';
 
 export function createBoard(){
     let values = getBoardValues();
+    if(values ===null){
+        return;
+    }
     let length = values.length;
     let width = values.width;
     let board =generateBoard(length,width,getBoxValues(length*width));
