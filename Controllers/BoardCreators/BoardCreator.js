@@ -1,7 +1,7 @@
 import {createBlocks} from '../../Views/CreateBoard.js';
 import { getBoxValues } from '../GenerateBoard/NumberBlocks.js';
 import {generateBoard} from '../GenerateBoard/BoardGenerator.js'
-import { removeCreateGameElements } from './CreateBoardElementsRemover.js';
+import { removeCreateGameElements } from '../../Views/CreateBoardElementsRemover.js';
 import { getBoardValues } from './ValueGetter.js';
 
 export function createBoard(){
