@@ -1,17 +1,20 @@
-function getOppositeFromRow(board,index,number){
+function getOppositeFromRow(board,positionX,positionY,number){
     let oppositeCounter=0;
-    for(let i =index[0];i<board[0].length;i++){
-        if(board[index[1]][i].val<number){
+    for(let i =positionX;i<board.blocks[0].length;i++){
+        if(board.blocks[positionY][i].val<number){
             oppositeCounter++;
         }
     }
     return oppositeCounter;
 }
-export function getOpposite(board,index){
+export function getOpposite(board,positionX,positionY){
     let oppositeCounter=0;
-    let number =board[index[1]][index[0]];
+    let blocks = board.blocks;
+    let number =blocks[positionY][[positionX]];
 
-    oppositeCounter+=getOppositeFromRow(board,index,number);
-
+    oppositeCounter+=getOppositeFromRow(board,positionX,positionY,number);
+    for(let i =positionY+1; i<blocks.length;i++){
+        oppositeCounter+=getOppositeFromRow(board,0,i,number);
+    }
     return oppositeCounter;
 }
