@@ -18,6 +18,7 @@ function getAllOpposites(board){
             oppositeCounter+=getOpposite(board,columns,rows);
         }
     }
+    return oppositeCounter;
 }
 function evenRowBoardChecker(opposites,board){
     opposites+=getZeroRow(board)+1;
@@ -39,6 +40,7 @@ function oddRowBoardChecker(opposites){
 export function checkBoard(board){
     let blocks = board.blocks;
     let opposites = getAllOpposites(board);
+
     if(blocks.length%2==0){
         return evenRowBoardChecker(opposites,board);
     }
